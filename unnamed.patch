@@ -1,0 +1,17 @@
+Index: src/router/index.js
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/router/index.js b/src/router/index.js
+--- a/src/router/index.js	(revision 072529a2fcd07b446a4f1cf5a6202cff228e972f)
++++ b/src/router/index.js	(revision 78f7c07c3861a6b17642809f2ca5dbff31c3f485)
+@@ -13,7 +13,7 @@
+     // route level code-splitting
+     // this generates a separate chunk (about.[hash].js) for this route
+     // which is lazy-loaded when the route is visited.
+-    component: () => import(/* webpackChunkName: "about" */ '@/views/About.vue')
++    component: () => import(/* webpackChunkName: "about" webpackPrefetch: true */ '@/views/About.vue')
+   }
+ ]
+ 
