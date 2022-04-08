@@ -1,12 +1,61 @@
 <template>
-  <div class="dataBinding">
+  <div>
+    <!--문자열 데이터 바인딩-->
+    <h3>hello, {{ title }}</h3>
+    <div>{{ htmlString }}</div>
+    <div v-html="htmlString"></div>
+
+    <!--input type text-->
+    <input type="text" v-model="textModel"><br>
+    <!-- input type number-->
+    <input type="number" v-model.number="numberModel"><br>
+
+    <!-- textarea -->
+    <textarea v-model="msg"></textarea><br>
+
+    <!-- select -->
+    <select name="select" id="box" v-model="city">
+      <option value="02">서울</option>
+      <option value="053">대구</option>
+      <option value="054">부산</option>
+    </select>
+
+    <!-- checkbox -->
+    <input type="checkbox" v-model="checked" true-value="yes" false-value="no"> {{ checked }}
+
+    <!-- radio -->
+    <input type="radio" v-model="picked" value="radioValue1">서울
+    <input type="radio" v-model="picked" value="radioValue2">대구
+    <input type="radio" v-model="picked" value="radioValue3">부산
 
   </div>
 </template>
 
 <script>
 export default {
-  name: 'DataBinding',
-  components: {}
+  name: 'dataBinding',
+  components: {},
+  data () {
+    return {
+      title: 'world',
+      htmlString: '<p>this is red string.</p>',
+      textModel: 'korea',
+      numberModel: 3,
+      msg: '여러줄을 입력할 수 있는 textarea 입니다.',
+      city: '02',
+      checked: true,
+      picked: '',
+      radioValue1: '서울',
+      radioValue2: '대구',
+      radioValue3: '부산'
+    }
+  },
+  computed: {},
+  watch: {},
+  methods: {}
 }
 </script>
+
+<style>
+
+</style>
