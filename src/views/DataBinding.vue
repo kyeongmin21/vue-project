@@ -11,23 +11,39 @@
     <input type="number" v-model.number="numberModel"><br>
 
     <!-- textarea -->
-    <textarea v-model="msg"></textarea><br>
+    <textarea v-model="msg"></textarea><br><br>
 
     <!-- select -->
     <select name="select" id="box" v-model="city">
       <option value="02">서울</option>
       <option value="053">대구</option>
       <option value="054">부산</option>
-    </select>
+    </select><br>
 
     <!-- checkbox -->
-    <input type="checkbox" v-model="checked" true-value="yes" false-value="no"> {{ checked }}
+    <input type="checkbox" v-model="checked" true-value="yes" false-value="no"> {{ checked }}<br>
 
     <!-- radio -->
-    <input type="radio" v-model="picked" value="radioValue1">서울
-    <input type="radio" v-model="picked" value="radioValue2">대구
-    <input type="radio" v-model="picked" value="radioValue3">부산
+    <input type="radio" v-model="picked" :value="radioValue1">서울
+    <input type="radio" v-model="picked" :value="radioValue2">대구
+    <input type="radio" v-model="picked" :value="radioValue3">부산
+    <div>선택한 지역 : {{ picked }}</div><br>
 
+    <!-- 버튼 객체의 disabled -->
+    <input type="text" v-model="textValue">
+    <button type="button" :disabled="textValue === ''">버튼</button><br>
+
+    <!-- 클래스 바인딩 -->
+    <div class="container"
+        :class="{'active' : isActive, 'text-red' : hasError}" >
+        Class Binding
+    </div>
+
+    <!-- 스타일 바인딩 -->
+    <div :style="styleObject">Style Binding</div>
+
+    <!-- 속성 -->
+    <img :src="imgSrc" alt="img">
   </div>
 </template>
 
@@ -47,7 +63,15 @@ export default {
       picked: '',
       radioValue1: '서울',
       radioValue2: '대구',
-      radioValue3: '부산'
+      radioValue3: '부산',
+      imgSrc: 'https://kr.vuejs.org/images/logo.png',
+      textValue: '',
+      isActive: true,
+      hasError: false,
+      styleObject: {
+        color: 'red'
+        // fontSize : '20px'
+      }
     }
   },
   computed: {},
@@ -57,5 +81,7 @@ export default {
 </script>
 
 <style>
-
+.container { width: 100%; height: 100px; }
+.active { background-color: lightyellow; font-weight: bold; }
+.text-red { color: red; }
 </style>
