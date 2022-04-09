@@ -19,6 +19,11 @@ const routes = [
     path: '/dataBinding',
     name: 'DataBinding',
     component: () => import(/* webpackChunkName: "dataBinding" webpackPrefetch: true */ '@/views/DataBinding.vue')
+  },
+  {
+    path: '/vFor',
+    name: 'Vfor',
+    component: () => import(/* webpackChunkName: "vFor" webpackPrefetch: true */ '@/views/Vfor.vue')
   }
 ]
 

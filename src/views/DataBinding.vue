@@ -44,6 +44,7 @@
 
     <!-- 속성 -->
     <img :src="imgSrc" alt="img">
+
   </div>
 </template>
 
