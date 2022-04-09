@@ -39,8 +39,8 @@
     <input type="text" @keyup.enter="enter">
 
     <!-- computed / watch -->
-    <h3>{{ firstName + '' + lastName }}</h3>
-    <h3>{{ fullName }}</h3>
+    <h3>fullName : {{ fullName }}</h3>
+    <button @click="changeName">변경</button>
   </div>
 </template>
 
@@ -56,6 +56,7 @@ export default {
       selectedValue: '서울',
       firstName: 'kim',
       lastName: ' kyeong min',
+      fullName: '',
       productList: [
         { name: '키보드', price: 25000, category: '노트북' },
         { name: '마우스', price: 25000, category: '노트북' },
@@ -64,11 +65,17 @@ export default {
     }
   },
   computed: {
-    fullName () {
-      return `${this.firstName} ${this.lastName}`
+  },
+  watch: {
+    firstName (newVal, oldVal) {
+      this.fullName = this.firstName + '' + this.lastName
+      console.log('newVal', newVal)
+      console.log('oldVal', oldVal)
+    },
+    lastName () {
+      this.fullName = this.firstName + '' + this.lastName
     }
   },
-  watch: {},
   methods: {
     up () {
       this.counter += 1
@@ -78,6 +85,9 @@ export default {
     },
     enter () {
       console.log('keyup event')
+    },
+    changeName () {
+      this.firstName = 'park'
     }
   }
 }
