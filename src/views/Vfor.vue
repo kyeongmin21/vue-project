@@ -18,6 +18,12 @@
       </tbody>
     </table>
 
+    <!-- if, show -->
+    <h3 v-if="type === 'A'">A</h3>
+    <h3 v-else-if="type === 'B'">B</h3>
+    <h3 v-else>C</h3>
+    <h3 v-show="show">v-show 가 true이면 보입니다.</h3>
+
   </div>
 </template>
 
@@ -27,6 +33,8 @@ export default {
   components: {},
   data () {
     return {
+      type: 'A',
+      show: true,
       productList: [
         { name: '키보드', price: 25000, category: '노트북' },
         { name: '마우스', price: 25000, category: '노트북' },
