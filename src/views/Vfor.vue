@@ -24,6 +24,16 @@
     <h3 v-else>C</h3>
     <h3 v-show="show">v-show 가 true이면 보입니다.</h3>
 
+    <!-- 이벤트 처리 -->
+    <button @click="up">증가버튼</button>
+    <p>the counter :  {{ counter }}</p>
+
+    <!-- change -->
+    <select v-model="selectedValue" @change="changeList">
+      <option value="서울">서울</option>
+      <option value="대구">대구</option>
+      <option value="부산">부산</option>
+    </select>
   </div>
 </template>
 
@@ -35,6 +45,8 @@ export default {
     return {
       type: 'A',
       show: true,
+      counter: 0,
+      selectedValue: '서울',
       productList: [
         { name: '키보드', price: 25000, category: '노트북' },
         { name: '마우스', price: 25000, category: '노트북' },
@@ -44,7 +56,14 @@ export default {
   },
   computed: {},
   watch: {},
-  methods: {}
+  methods: {
+    up () {
+      this.counter += 1
+    },
+    changeList () {
+      console.log(this.selectedValue)
+    }
+  }
 }
 </script>
 
