@@ -33,7 +33,14 @@
       <option value="서울">서울</option>
       <option value="대구">대구</option>
       <option value="부산">부산</option>
-    </select>
+    </select><br>
+
+    <!-- keyup -->
+    <input type="text" @keyup.enter="enter">
+
+    <!-- computed / watch -->
+    <h3>{{ firstName + '' + lastName }}</h3>
+    <h3>{{ fullName }}</h3>
   </div>
 </template>
 
@@ -47,6 +54,8 @@ export default {
       show: true,
       counter: 0,
       selectedValue: '서울',
+      firstName: 'kim',
+      lastName: ' kyeong min',
       productList: [
         { name: '키보드', price: 25000, category: '노트북' },
         { name: '마우스', price: 25000, category: '노트북' },
@@ -54,7 +63,11 @@ export default {
       ]
     }
   },
-  computed: {},
+  computed: {
+    fullName () {
+      return `${this.firstName} ${this.lastName}`
+    }
+  },
   watch: {},
   methods: {
     up () {
@@ -62,6 +75,9 @@ export default {
     },
     changeList () {
       console.log(this.selectedValue)
+    },
+    enter () {
+      console.log('keyup event')
     }
   }
 }
