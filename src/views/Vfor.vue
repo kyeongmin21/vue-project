@@ -57,12 +57,11 @@ export default {
       firstName: 'kim',
       lastName: ' kyeong min',
       fullName: '',
-      productList: [
-        { name: '키보드', price: 25000, category: '노트북' },
-        { name: '마우스', price: 25000, category: '노트북' },
-        { name: '아이패드', price: 25000, category: '노트북' }
-      ]
+      productList: []
     }
+  },
+  created () {
+    this.getList()
   },
   computed: {
   },
@@ -77,6 +76,9 @@ export default {
     }
   },
   methods: {
+    async getList () {
+      this.productList = await fetch('https://214db7a1-74cc-4b71-879f-04b14f15e282.mock.pstmn.io/test').then(a => a.json())
+    },
     up () {
       this.counter += 1
     },
