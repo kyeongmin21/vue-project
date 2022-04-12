@@ -11,9 +11,9 @@
       </thead>
       <tbody>
         <tr v-for="(product, i) in productList" :key="i">
-          <td>{{ product.name}}</td>
-          <td>{{ product.price}}</td>
-          <td>{{ product.category}}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.age }}</td>
+          <td>{{ product.like }}</td>
         </tr>
       </tbody>
     </table>
@@ -41,6 +41,9 @@
     <!-- computed / watch -->
     <h3>fullName : {{ fullName }}</h3>
     <button @click="changeName">변경</button>
+
+    <!-- async await -->
+
   </div>
 </template>
 
@@ -76,8 +79,12 @@ export default {
     }
   },
   methods: {
+    async joycoding () {
+      return 'async는 function앞에 있어요.'
+    },
     async getList () {
-      this.productList = await fetch('https://214db7a1-74cc-4b71-879f-04b14f15e282.mock.pstmn.io/test').then(a => a.json())
+      // this.productList = await fetch('https://573a9775-b6c0-4e52-a8e0-2a84aae27a83.mock.pstmn.io/test').then(a => a.json())
+      console.log(this.productList)
     },
     up () {
       this.counter += 1

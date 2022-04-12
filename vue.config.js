@@ -7,5 +7,11 @@ module.exports = {
         '@': path.join(__dirname, 'src/')
       }
     }
+  },
+  devServer: {
+    host: 'localhost',
+    hot: true,
+    disableHostCheck: true,
+    https: false
   }
 }
