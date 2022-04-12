@@ -14,8 +14,8 @@
     <textarea v-model="msg"></textarea><br><br>
 
     <!-- select -->
-    <select name="select" id="box" v-model="city">
-      <option value="02">서울</option>
+    <select name="select" id="box" :value="value" >
+      <option value="02">서울222</option>
       <option value="053">대구</option>
       <option value="054">부산</option>
     </select><br>
@@ -54,12 +54,12 @@ export default {
   components: {},
   data () {
     return {
+      value: '02',
       title: 'world',
       htmlString: '<p>this is red string.</p>',
       textModel: 'korea',
       numberModel: 3,
       msg: '여러줄을 입력할 수 있는 textarea 입니다.',
-      city: '02',
       checked: true,
       picked: '',
       radioValue1: '서울',

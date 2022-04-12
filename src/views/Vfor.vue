@@ -22,7 +22,7 @@
     <h3 v-if="type === 'A'">A</h3>
     <h3 v-else-if="type === 'B'">B</h3>
     <h3 v-else>C</h3>
-    <h3 v-show="show">v-show 가 true이면 보입니다.</h3>
+    <h3 v-show="show">v-show 가 true 이면 보입니다.</h3>
 
     <!-- 이벤트 처리 -->
     <button @click="up">증가버튼</button>
@@ -42,8 +42,6 @@
     <h3>fullName : {{ fullName }}</h3>
     <button @click="changeName">변경</button>
 
-    <!-- async await -->
-
   </div>
 </template>
 
@@ -54,7 +52,7 @@ export default {
   data () {
     return {
       type: 'A',
-      show: true,
+      show: false,
       counter: 0,
       selectedValue: '서울',
       firstName: 'kim',
@@ -79,9 +77,6 @@ export default {
     }
   },
   methods: {
-    async joycoding () {
-      return 'async는 function앞에 있어요.'
-    },
     async getList () {
       // this.productList = await fetch('https://573a9775-b6c0-4e52-a8e0-2a84aae27a83.mock.pstmn.io/test').then(a => a.json())
       console.log(this.productList)
