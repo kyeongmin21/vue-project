@@ -24,6 +24,11 @@ const routes = [
     path: '/vFor',
     name: 'Vfor',
     component: () => import(/* webpackChunkName: "vFor" webpackPrefetch: true */ '@/views/Vfor.vue')
+  },
+  {
+    path: '/nestedComponent',
+    name: 'NestedComponent',
+    component: () => import(/* webpackChunkName: "nestedComponent" webpackPrefetch: true */ '@/views/NestedComponent.vue')
   }
 ]
 

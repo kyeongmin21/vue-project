@@ -1,13 +1,15 @@
 <template>
   <div>
-    <h2>Page Title</h2>
+    <PageTitle></PageTitle>
   </div>
 </template>
 
 <script>
+import PageTitle from '@/components/PageTitle'
+
 export default {
-  name: 'PageTitle',
-  components: {},
+  name: 'NestedComponent',
+  components: { PageTitle },
   data () {
     return {}
   },
