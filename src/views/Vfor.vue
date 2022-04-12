@@ -78,8 +78,8 @@ export default {
   },
   methods: {
     async getList () {
-      // this.productList = await fetch('https://573a9775-b6c0-4e52-a8e0-2a84aae27a83.mock.pstmn.io/test').then(a => a.json())
-      console.log(this.productList)
+      this.productList = await fetch('https://573a9775-b6c0-4e52-a8e0-2a84aae27a83.mock.pstmn.io/test').then(a => a.json())
+      // console.log(this.productList)
     },
     up () {
       this.counter += 1
