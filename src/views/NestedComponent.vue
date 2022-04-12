@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageTitle></PageTitle>
+    <PageTitle :title="[1,2,3]"></PageTitle>
   </div>
 </template>
 
@@ -11,7 +11,9 @@ export default {
   name: 'NestedComponent',
   components: { PageTitle },
   data () {
-    return {}
+    return {
+
+    }
   },
   computed: {},
   watch: {},

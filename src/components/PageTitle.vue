@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Page Title</h2>
+    <h2>{{ title }}</h2>
   </div>
 </template>
 
@@ -8,8 +8,14 @@
 export default {
   name: 'PageTitle',
   components: {},
+  props: {
+    title: {
+      type: Array
+    }
+  },
   data () {
-    return {}
+    return {
+    }
   },
   computed: {},
   watch: {},
