@@ -6,7 +6,7 @@ export default {
       return (await axios({
         method: 'get',
         url: 'https://214db7a1-74cc-4b71-879f-04b14f15e282.mock.pstmn.io/test',
-        data: ''
+        data
       }).then((response) => {
         console.log(response.data)
       }).catch(e => {
