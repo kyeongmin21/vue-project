@@ -1,11 +1,11 @@
 <template>
   <div>
-    <ChildComponent ref="child_component" @send-message="sendMessage"></ChildComponent>
+    <child-component ref="child_component" @send-message="sendMessage" />
   </div>
 </template>
 
 <script>
-import ChildComponent from '@/views/ChildComponent'
+import ChildComponent from '@/views/ChildComponent2'
 
 export default {
   name: 'ParentComponent',
@@ -16,7 +16,7 @@ export default {
     return {}
   },
   mounted () {
-    this.$refs.child_component.$refs.btn.click()
+    this.$refs.child_component.callFromParent()
   }
 }
 </script>
