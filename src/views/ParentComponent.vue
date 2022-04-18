@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ChildComponent ref="child_component" @send-message="sendMessage"></ChildComponent>
+    <ChildComponent ref="child_component" ></ChildComponent>
   </div>
 </template>
 

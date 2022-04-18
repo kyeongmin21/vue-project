@@ -4,7 +4,9 @@
     <router-link to="/DataBinding">Data Binding</router-link> |
     <router-link to="/vFor">Binding</router-link> |
     <router-link to="/NestedComponent">components</router-link> |
-    <router-link to="/ParentComponent">부모/자식</router-link>
+    <router-link to="/ParentComponent">부모/자식</router-link> |
+    <router-link to="/ParentComponent2">부모/자식2</router-link> |
+    <router-link to="/ParentComponent3">부모/자식3</router-link> |
   </div>
   <router-view/>
 </template>

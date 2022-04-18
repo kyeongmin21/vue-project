@@ -1,6 +1,6 @@
 <template>
   <div>
-    <child-component ref="child_component" @send-message="sendMessage" />
+    <child-component ref="child_component" />
   </div>
 </template>
 
@@ -8,7 +8,7 @@
 import ChildComponent from '@/views/ChildComponent2'
 
 export default {
-  name: 'ParentComponent',
+  name: 'ParentComponent2',
   components: {
     ChildComponent
   },

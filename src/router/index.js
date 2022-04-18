@@ -34,6 +34,16 @@ const routes = [
     path: '/parentComponent',
     name: 'ParentComponent',
     component: () => import(/* webpackChunkName: "parentComponent" webpackPrefetch: true */ '@/views/ParentComponent.vue')
+  },
+  {
+    path: '/parentComponent2',
+    name: 'ParentComponent2',
+    component: () => import(/* webpackChunkName: "parentComponent2" webpackPrefetch: true */ '@/views/ParentComponent2.vue')
+  },
+  {
+    path: '/parentComponent3',
+    name: 'ParentComponent3',
+    component: () => import(/* webpackChunkName: "parentComponent3" webpackPrefetch: true */ '@/views/ParentComponent3.vue')
   }
 ]
 
