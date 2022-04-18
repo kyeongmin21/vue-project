@@ -1,14 +1,15 @@
 <template>
   <div>
-    <button type="button" @click="childFunc" ref="btn">click</button>
+   <ChildComponent></ChildComponent>
   </div>
 </template>
 
 <script>
+import ChildComponent from '@/views/ChildComponent'
 export default {
-  name: 'ChildComponent',
+  name: 'ParentComponent',
   components: {
-
+    ChildComponent
   },
   data () {
     return {

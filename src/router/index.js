@@ -29,6 +29,11 @@ const routes = [
     path: '/nestedComponent',
     name: 'NestedComponent',
     component: () => import(/* webpackChunkName: "nestedComponent" webpackPrefetch: true */ '@/views/NestedComponent.vue')
+  },
+  {
+    path: '/parentComponent',
+    name: 'ParentComponent',
+    component: () => import(/* webpackChunkName: "parentComponent" webpackPrefetch: true */ '@/views/ParentComponent.vue')
   }
 ]
 
