@@ -8,6 +8,7 @@
     <router-link to="/ParentComponent2">부모/자식2</router-link> |
     <router-link to="/ParentComponent3">부모/자식3</router-link> |
     <router-link to="/ParentComponent4">부모/자식4</router-link> |
+    <router-link to="/ParentComponent5">부모/자식5</router-link> |
   </div>
   <router-view/>
 </template>
