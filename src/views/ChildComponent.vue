@@ -1,28 +1,27 @@
 <template>
   <div>
-    <PageTitle :title="[1,2,3]"></PageTitle>
+    <button type="button" @click="childFunc">click</button>
   </div>
 </template>
 
 <script>
-import PageTitle from '@/components/PageTitle'
-
 export default {
   name: 'NestedComponent',
   components: {
-    PageTitle
+
   },
   data () {
     return {
 
     }
   },
-  computed: {},
-  watch: {},
-  methods: {}
+  methods: {
+    childFunc() {
+      console.log('부모 컴포넌트에서 직접 발생시킨 이벤트')
+    }
+  }
 }
 </script>
 
 <style>
-
 </style>
