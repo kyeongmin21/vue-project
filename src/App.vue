@@ -11,6 +11,7 @@
     <router-link to="/ParentComponent5">부모/자식5</router-link> |<br><br>
     <router-link to="/SlotModalLayout">Slot Modal</router-link> |
     <router-link to="/CompositionAPI">CompositionAPI</router-link> |
+    <router-link to="/CompositionAPIProvide">CompositionAPIProvide</router-link> |
   </div>
   <router-view/>
 </template>

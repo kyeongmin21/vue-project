@@ -64,6 +64,11 @@ const routes = [
     path: '/compositionAPI',
     name: 'CompositionAPI',
     component: () => import(/* webpackChunkName: "compositionAPI" webpackPrefetch: true */ '@/views/CompositionAPI.vue')
+  },
+  {
+    path: '/compositionAPIProvide',
+    name: 'CompositionAPIProvide',
+    component: () => import(/* webpackChunkName: "compositionAPIProvide" webpackPrefetch: true */ '@/views/CompositionAPIProvide.vue')
   }
 ]
 
