@@ -13,10 +13,14 @@
 
 <script>
 import { plusCalculator } from '@/common.js'
+import { onMounted } from 'vue'
 
 export default {
   name: 'CompositionAPI',
   setup () {
+    onMounted(() => {
+      console.log('component is mounted')
+    })
     const { num1, num2, result } = plusCalculator()
     return {
       num1, num2, result
