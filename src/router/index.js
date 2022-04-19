@@ -59,6 +59,11 @@ const routes = [
     path: '/slotModalLayout',
     name: 'SlotModalLayout',
     component: () => import(/* webpackChunkName: "slotModalLayout" webpackPrefetch: true */ '@/views/SlotModalLayout.vue')
+  },
+  {
+    path: '/compositionAPI',
+    name: 'CompositionAPI',
+    component: () => import(/* webpackChunkName: "compositionAPI" webpackPrefetch: true */ '@/views/CompositionAPI.vue')
   }
 ]
 
