@@ -12,6 +12,7 @@
     <router-link to="/SlotModalLayout">Slot Modal</router-link> |
     <router-link to="/CompositionAPI">CompositionAPI</router-link> |
     <router-link to="/CompositionAPIProvide">CompositionAPIProvide</router-link> |
+    <router-link to="/Mixins">Mixins</router-link> |
   </div>
   <router-view/>
 </template>

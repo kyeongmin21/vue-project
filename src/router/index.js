@@ -69,6 +69,11 @@ const routes = [
     path: '/compositionAPIProvide',
     name: 'CompositionAPIProvide',
     component: () => import(/* webpackChunkName: "compositionAPIProvide" webpackPrefetch: true */ '@/views/CompositionAPIProvide.vue')
+  },
+  {
+    path: '/mixins',
+    name: 'Mixins',
+    component: () => import(/* webpackChunkName: "mixins" webpackPrefetch: true */ '@/views/Mixins.vue')
   }
 ]
 
