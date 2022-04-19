@@ -2,9 +2,9 @@
   <div>
     <h2>Calculate</h2>
     <div>
-      <input type="text" v-model="state.num1" @keyup="plusNumbers">
+      <input type="text" v-model="state.num1" >
       <span> + </span>
-      <input type="text" v-model="state.num2" @keyup="plusNumbers">
+      <input type="text" v-model="state.num2">
       <span> = </span>
       <span>{{ state.result }}</span>
     </div>
@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { reactive } from 'vue'
+import { reactive, computed } from 'vue'
 
 export default {
   name: 'CompositionAPI',
@@ -20,14 +20,10 @@ export default {
     const state = reactive({
       num1: 0,
       num2: 0,
-      result: 0
+      result: computed(() => Number(state.num1) + Number(state.num2))
     })
-    function plusNumbers () {
-      state.result = Number(state.num1) + Number(state.num2)
-    }
     return {
-      state,
-      plusNumbers
+      state
     }
   }
 }
