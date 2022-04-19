@@ -8,6 +8,12 @@ import Apimixin from '@/api.js'
 
 export default {
   mixins: [Apimixin],
+  // mounted () {
+  //   console.log('믹스인 mounted')
+  // },
+  // unmounted () {
+  //   console.log('믹스인 unmounted')
+  // }
   data () {
     return {
       productList: []
