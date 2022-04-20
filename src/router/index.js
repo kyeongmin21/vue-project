@@ -74,6 +74,11 @@ const routes = [
     path: '/mixins',
     name: 'Mixins',
     component: () => import(/* webpackChunkName: "mixins" webpackPrefetch: true */ '@/views/Mixins.vue')
+  },
+  {
+    path: '/customDirective',
+    name: 'CustomDirective',
+    component: () => import(/* webpackChunkName: "customDirective" webpackPrefetch: true */ '@/views/CustomDirective.vue')
   }
 ]
 

@@ -13,6 +13,7 @@
     <router-link to="/CompositionAPI">CompositionAPI</router-link> |
     <router-link to="/CompositionAPIProvide">CompositionAPIProvide</router-link> |
     <router-link to="/Mixins">Mixins</router-link> |
+    <router-link to="/CustomDirective">CustomDirective</router-link> |
   </div>
   <router-view/>
 </template>
