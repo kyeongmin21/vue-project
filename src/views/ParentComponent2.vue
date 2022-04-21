@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <child-component ref="child_component" />
-  </div>
+  <child-component ref="child_component" />
 </template>
 
 <script>
