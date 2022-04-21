@@ -12,6 +12,7 @@ module.exports = {
     host: 'localhost',
     hot: true,
     disableHostCheck: true,
-    https: false
+    https: false,
+    overlay: false
   }
 }
