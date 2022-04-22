@@ -6,13 +6,12 @@
 <script>
 export default {
   name: 'StoreAccess',
-  data () {
-    return {
-    }
-  },
   computed: {
     count () {
       return this.$store.state.count
+    },
+    cartCount () {
+      return this.$store.state.cartCount
     }
   },
   methods: {
