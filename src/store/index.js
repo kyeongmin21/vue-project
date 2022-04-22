@@ -22,6 +22,9 @@ export default createStore({
     }
   },
   actions: {
+    increment (context) {
+      context.commit('increment')
+    }
   },
   modules: {
   }
