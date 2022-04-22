@@ -86,9 +86,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "storeAccess" webpackPrefetch: true */ '@/views/StoreAccess.vue')
   },
   {
-    path: '/login',
-    name: 'Login',
-    component: () => import(/* webpackChunkName: "login" webpackPrefetch: true */ '@/views/Login.vue')
+    path: '/kakaologin',
+    name: 'KakaoLogin',
+    component: () => import(/* webpackChunkName: "kakaologin" webpackPrefetch: true */ '@/views/KakaoLogin.vue')
   }
 ]
 
