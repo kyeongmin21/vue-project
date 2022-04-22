@@ -14,6 +14,7 @@
     <router-link to="/CompositionAPIProvide">CompositionAPIProvide</router-link> |
     <router-link to="/Mixins">Mixins</router-link> |
     <router-link to="/CustomDirective">CustomDirective</router-link> |
+    <router-link to="/StoreAccess">StoreAccess</router-link> |
   </div>
   <router-view/>
 </template>

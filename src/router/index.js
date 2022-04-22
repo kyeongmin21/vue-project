@@ -79,6 +79,11 @@ const routes = [
     path: '/customDirective',
     name: 'CustomDirective',
     component: () => import(/* webpackChunkName: "customDirective" webpackPrefetch: true */ '@/views/CustomDirective.vue')
+  },
+  {
+    path: '/storeAccess',
+    name: 'StoreAccess',
+    component: () => import(/* webpackChunkName: "storeAccess" webpackPrefetch: true */ '@/views/StoreAccess.vue')
   }
 ]
 
