@@ -1,13 +1,14 @@
 <template>
   <div>
+    <h3>믹스인</h3>
   </div>
 </template>
 
 <script>
-import Apimixin from '@/api.js'
+import ApiMixin from '@/api'
 
 export default {
-  mixins: [Apimixin],
+  mixins: [ApiMixin],
   // mounted () {
   //   console.log('믹스인 mounted')
   // },
