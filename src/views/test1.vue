@@ -1,17 +1,18 @@
 <template>
   <div>
     <h2>calculator</h2>
-    <input type="text" v-model="state.num1">
+    <input type="text" v-model="num1">
     <span>+</span>
-    <input type="text" v-model="state.num2">
+    <input type="text" v-model="num2">
     <span>=</span>
-    <span>{{ state.result }}</span>
+    <span>{{ result }}</span>
   </div>
 </template>
 
 <script>
-import { reactive, computed, toRefs } from 'vue'
-function plusCalculator () {
+import { computed, reactive, toRefs } from 'vue'
+
+function plus () {
   const state = reactive({
     num1: '',
     num2: '',
@@ -22,7 +23,7 @@ function plusCalculator () {
 export default {
   name: 'test1',
   setup () {
-    const { num1, num2, result } = plusCalculator()
+    const { num1, num2, result } = plus()
     return { num1, num2, result }
   }
 }
