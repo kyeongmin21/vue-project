@@ -8,7 +8,11 @@ createApp(App)
   .use(store)
   .use(router)
   .mixin(mixins)
-  .directive('focus', { mounted (el) { el.focus() } })
+  .directive('focus', {
+    mounted (el) {
+      el.focus()
+    }
+  })
   .mount('#app')
 
 window.Kakao.init('3d11e9ddcd1b78eee6b8dec29e8583e4')

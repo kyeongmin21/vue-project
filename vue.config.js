@@ -9,14 +9,6 @@ module.exports = {
     }
   },
   devServer: {
-    port: 8080,
-    proxy: {
-      '^api': {
-        // eslint-disable-next-line no-undef
-        target,
-        changeOrigin: true
-      }
-    },
     host: 'localhost',
     hot: true,
     disableHostCheck: true,
