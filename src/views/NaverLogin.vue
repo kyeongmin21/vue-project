@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'KakaoLogin',
+  name: 'NaverLogin',
   data () {
     return {
     }
