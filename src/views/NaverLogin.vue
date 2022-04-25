@@ -1,7 +1,7 @@
 <template>
   <div>
     <div id="naverIdLogin"></div>
-    <button type="button" @click="logout">로그아웃</button>
+    <button type="button" @click="logout">네이버 로그아웃</button>
   </div>
 </template>
 
@@ -31,11 +31,7 @@ export default {
         console.log('this.naverLogin.user', this.naverLogin.user)
 
         const email = this.naverLogin.user.getEmail()
-        if (email === undefined || email === null) {
-          alert('이메일은 필수 정보 입니다. 정보 제공을 동의해 주세요.')
-          this.naverLogin.prompt()
-          return
-        }
+        console.log('email', email)
       } else {
         console.log('callback 처리에 실패하였습니다.')
       }
