@@ -13,9 +13,10 @@
     <router-link to="/CompositionAPI">CompositionAPI</router-link> |
     <router-link to="/CompositionAPIProvide">CompositionAPIProvide</router-link> |
     <router-link to="/Mixins">Mixins</router-link> |
-    <router-link to="/CustomDirective">CustomDirective</router-link> |
+    <router-link to="/CustomDirective">CustomDirective</router-link> |<br><br>
     <router-link to="/StoreAccess">StoreAccess</router-link> |
     <router-link to="/Test1">test</router-link> |
+    <router-link to="/NaverLogin">네이버로그인</router-link> |
   </div>
   <router-view/>
 </template>
