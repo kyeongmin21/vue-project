@@ -1,10 +1,12 @@
 <template>
-  <div class="home">
+  <div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Home'
+  name: 'GoogleLogin',
+  methods: {
+  }
 }
 </script>
