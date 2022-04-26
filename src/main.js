@@ -3,10 +3,18 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import mixins from './mixins'
+import VueGoogleMaps from 'vue3-google-map'
 
 createApp(App)
   .use(store)
   .use(router)
+  .use(VueGoogleMaps, {
+    load: {
+      key: 'AIzaSyCcESs9ObeJsAfgHcttqttqdaOQGRQ311g',
+      libraries: 'places',
+      region: 'KR'
+    }
+  })
   .mixin(mixins)
   .directive('focus', {
     mounted (el) {

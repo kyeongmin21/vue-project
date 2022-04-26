@@ -2,12 +2,28 @@
   <div>
     <h1>구글 로그인</h1>
     <div id="google-signin-btn"></div>
+    <br><br>
+    <h1>구글맵</h1>
+    <GoogleMap api-key="AIzaSyCcESs9ObeJsAfgHcttqttqdaOQGRQ311g" style="width: 100%; height: 500px"
+               :center="center"
+               :zoom="10">
+      <Marker :options="{ position: center }" />
+    </GoogleMap>
   </div>
 </template>
 
 <script>
+import { GoogleMap, Marker } from 'vue3-google-map'
+
 export default {
   name: 'GoogleLogin',
+  components: { GoogleMap, Marker },
+  data () {
+    return {
+      // https://www.npmjs.com/package/vue3-google-map
+      center: { lat: 37.504449, lng: 127.048860 }
+    }
+  },
   mounted () {
     window.gapi.signin2.render('google-signin-btn', { onsuccess: this.onSignIn })
   },
