@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <div id="naverIdLogin"></div>
-    <button type="button" @click="logout">네이버 로그아웃</button>
-  </div>
+  <div id="naverIdLogin"></div>
+  <button type="button" class="naverBtn" @click="logout" >네이버 로그아웃</button>
 </template>
 
 <script>
@@ -21,7 +19,7 @@ export default {
       callbackUrl: 'http://localhost:8080/naverlogin',
       isPopup: true,
       loginButton: {
-        color: 'green', type: 3, height: 60
+        color: 'green', type: 3, height: 50
       }
     })
     this.naverLogin.init()
@@ -48,3 +46,7 @@ export default {
   }
 }
 </script>
+
+<style>
+@import '/css/style.css';
+</style>

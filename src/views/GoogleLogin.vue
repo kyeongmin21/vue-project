@@ -4,7 +4,8 @@
     <div id="google-signin-btn"></div>
     <br><br>
     <h1>구글맵</h1>
-    <GoogleMap api-key="AIzaSyCcESs9ObeJsAfgHcttqttqdaOQGRQ311g" style="width: 100%; height: 500px"
+    <GoogleMap api-key="AIzaSyCcESs9ObeJsAfgHcttqttqdaOQGRQ311g"
+               style="width: 100%; height: 500px"
                :center="center"
                :zoom="10">
       <Marker :options="{ position: center }" />

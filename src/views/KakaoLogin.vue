@@ -6,7 +6,7 @@
            alt="카카오로그인" />
     </a>
     <br>
-    <button type="button" @click="kakaoLogout">카카오 로그아웃</button>
+    <button type="button" class="kakaoBtn" @click="kakaoLogout">카카오 로그아웃</button>
     <br>
   </div>
 </template>
