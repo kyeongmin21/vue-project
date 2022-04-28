@@ -1,27 +1,20 @@
 <template>
   <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/DataBinding">Data Binding</router-link> |
-    <router-link to="/vFor">Binding</router-link> |
-    <router-link to="/NestedComponent">components</router-link> |<br><br>
-    <router-link to="/ParentComponent">부모/자식</router-link> |
-    <router-link to="/ParentComponent2">부모/자식2</router-link> |
-    <router-link to="/ParentComponent3">부모/자식3</router-link> |
-    <router-link to="/ParentComponent4">부모/자식4</router-link> |
-    <router-link to="/ParentComponent5">부모/자식5</router-link> |<br><br>
-    <router-link to="/SlotModalLayout">Slot Modal</router-link> |
-    <router-link to="/CompositionAPI">CompositionAPI</router-link> |
-    <router-link to="/CompositionAPIProvide">CompositionAPIProvide</router-link> |
-    <router-link to="/Mixins">Mixins</router-link> |
-    <router-link to="/CustomDirective">CustomDirective</router-link> |<br><br>
-    <router-link to="/StoreAccess">StoreAccess</router-link> |
-    <router-link to="/Test1">test</router-link> |
-    <router-link to="/KakaoLogin">카카오로그인</router-link> |
-    <router-link to="/NaverLogin">네이버로그인</router-link> |
-    <router-link to="/GoogleLogin">구글로그인</router-link> |
+    <Header></Header>
   </div>
   <router-view/>
 </template>
+
+<script>
+import Header from "@/components/Header"
+
+export default {
+  name: 'App',
+  components: {
+    Header
+  }
+}
+</script>
 
 <style>
 #app {
