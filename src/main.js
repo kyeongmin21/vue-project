@@ -4,6 +4,8 @@ import router from './router'
 import store from './store'
 import mixins from './mixins'
 import VueGoogleMaps from 'vue3-google-map'
+import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap"
 
 createApp(App)
   .use(store)

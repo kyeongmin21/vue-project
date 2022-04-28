@@ -5,6 +5,8 @@
     text-align: center;
     color: #2c3e50;
 }
+h1 { color: #42b983; }
+h3 { margin: 10px 0; }
 
 .baseWrap { width: 100%; height: 100vh; display: flex; overflow: hidden;}
 .header { width: 190px; overflow-y: auto; border:1px solid #333; text-align: left; padding-left: 10px; }
@@ -15,6 +17,7 @@
 #nav .router-link-exact-active { color: #42b983; }
 
 .kakaoBtn { width: 200px; height: 50px; line-height: 50px; border: none; border-radius: 5px; background: #fcea4f; font-size: 1rem; font-weight: 600; }
+.kakao .kakaoLogout { margin: 20px 0; }
 .naverBtn { width: 200px; height: 50px; line-height: 50px; border: none; border-radius: 5px; background: #1ec800; font-size: 1rem; font-weight: 600; color: #fff; }
 
 
