@@ -1,7 +1,9 @@
 <template>
-  <component :is="layout">
-    <slot/>
-  </component>
+  <div id="app">
+    <component :is="layout">
+      <slot/>
+    </component>
+  </div>
 </template>
 
 <script>
