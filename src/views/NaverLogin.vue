@@ -1,6 +1,10 @@
 <template>
-  <div id="naverIdLogin"></div>
-  <button type="button" class="naverBtn" @click="logout" >네이버 로그아웃</button>
+  <div class="naver">
+    <h1>Naver</h1>
+    <button type="button" id="naverIdLogin" ></button>
+    <button type="button" class="naverBtn naverLogout ms-1" @click="naverLogout" >로그아웃</button>
+  </div>
+
 </template>
 
 <script>
@@ -36,7 +40,7 @@ export default {
     })
   },
   methods: {
-    logout () {
+    naverLogout () {
       const accessToken = this.naverLogin.accessToken.accessToken
       const url = `/oauth2.0/token?grant_type=delete&client_id=zFcLWPMTcDQTNB6iIOy&client_secret=bUW7FZMpS9&access_token=${accessToken}&service_provider=NAVER`
       axios.get(url).then((res) => {
