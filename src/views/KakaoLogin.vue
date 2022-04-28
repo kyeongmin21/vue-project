@@ -29,10 +29,10 @@ export default {
       window.Kakao.API.request({
         url: '/v2/user/me',
         success: res => {
-          const kakao_account = res.kakao_account
-          const name = kakao_account.profile_nickname
-          const image = kakao_account.profile_image
-          const email = kakao_account.account_email
+          const kakaoAccount = res.kakao_account
+          const name = kakaoAccount.profile_nickname
+          const image = kakaoAccount.profile_image
+          const email = kakaoAccount.account_email
           console.log(name)
           console.log(image)
           console.log(email)
