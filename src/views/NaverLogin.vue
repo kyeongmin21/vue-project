@@ -3,8 +3,10 @@
     <h1>Naver</h1>
     <button type="button" id="naverIdLogin" ></button>
     <button type="button" class="naverBtn naverLogout ms-1" @click="naverLogout" >로그아웃</button>
+    <div class="naverMap">
+      <div id="map"></div>
+    </div>
   </div>
-
 </template>
 
 <script>
@@ -37,6 +39,11 @@ export default {
       } else {
         console.log('callback 처리에 실패하였습니다.')
       }
+    })
+
+    const map = new naver.maps.Map('map', {
+      center: new naver.maps.LatLng(37.3595704, 127.105399),
+      zoom: 10
     })
   },
   methods: {

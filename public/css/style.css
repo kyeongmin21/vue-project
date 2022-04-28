@@ -19,9 +19,11 @@ ul { padding-left: 0!important;}
 
 .kakaoBtn { width: 200px; height: 50px; line-height: 50px; border: none; border-radius: 5px; background: #fee500; font-size: 1rem; font-weight: 600; }
 .kakao .kakaoLogout { margin: 20px 0; }
-.kakao .kakaoMap #map { width: 500px; height: 500px;  margin: 0 auto; }
+.kakao .kakaoMap #map { width: 100%; height: 600px;  margin: 0 auto; }
 
 .naverBtn { width: 200px; height: 50px; line-height: 50px; border: none; border-radius: 5px; background: #1ec800; font-size: 1rem; font-weight: 600; color: #fff; }
 .naver .naverLogout { margin: 20px 0; }
-.naver .naverMap #map { width: 500px; height: 500px; margin: 0 auto; }
+.naver .naverMap #map { width: 100%; height: 600px; margin: 0 auto; }
+
+.google .googleMap { width: 100%; height: 600px; }
 
