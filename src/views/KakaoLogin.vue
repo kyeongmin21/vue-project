@@ -1,13 +1,9 @@
 <template>
   <div>
-    <a id="custom-login-btn" @click="kakaoLogin">
-      <img src="//k.kakaocdn.net/14/dn/btqCn0WEmI3/nijroPfbpCa4at5EIsjyf0/o.jpg"
-           width="222"
-           alt="카카오로그인" />
-    </a>
-    <br>
-    <button type="button" class="kakaoBtn" @click="kakaoLogout">카카오 로그아웃</button>
-    <br>
+    <div id="custom-login-btn" @click="kakaoLogin">
+      <button type="button" class="kakaoBtn">카카오 로그인</button>
+      <button type="button" class="kakaoBtn ml-1" @click="kakaoLogout">카카오 로그아웃</button>
+    </div>
   </div>
 </template>
 
