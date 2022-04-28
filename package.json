@@ -38,6 +38,9 @@
     "env": {
       "node": true
     },
+    "globals": {
+      "kakao": false
+    },
     "extends": [
       "plugin:vue/vue3-essential",
       "@vue/standard"
@@ -45,7 +48,21 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {}
+    "rules": {
+      "vue/multi-word-compnent-names": [
+        "error",
+        {
+          "ignores": [
+            "default",
+            "kakao",
+            "Kakao",
+            "naver",
+            "Naver",
+            "gapi"
+          ]
+        }
+      ]
+    }
   },
   "browserslist": [
     "> 1%",

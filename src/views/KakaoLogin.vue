@@ -5,14 +5,24 @@
       <button type="button" class="kakaoBtn">카카오 로그인</button>
       <button type="button" class="kakaoBtn kakaoLogout ms-1" @click="kakaoLogout">로그아웃</button>
     </div>
+
+    <div class="kakaoMap">
+      <div id="map"></div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'KakaoLogin',
-  data () {
-    return {
+  mounted () {
+    if (window.kakao && window.kakao.maps) {
+      this.initMap()
+    } else {
+      const script = document.createElement('script')
+      script.onload = () => kakao.maps.load(this.initMap)
+      script.src = 'http://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=3d11e9ddcd1b78eee6b8dec29e8583e4'
+      document.head.appendChild(script)
     }
   },
   methods: {
@@ -51,6 +61,14 @@ export default {
         alert(response + ' logout')
         window.location.href = '/'
       })
+    },
+    initMap() {
+      const mapContainer = document.getElementById('map'),
+        mapOption = {
+          center: new kakao.maps.LatLng(37.564343, 126.947613),
+          level: 3
+        }
+      const map = new kakao.maps.Map(mapContainer, mapOption)
     }
   }
 }
