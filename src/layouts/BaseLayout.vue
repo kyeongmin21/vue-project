@@ -1,9 +1,7 @@
 <template>
-  <div id="app">
     <component :is="layout">
       <slot/>
     </component>
-  </div>
 </template>
 
 <script>
@@ -17,3 +15,6 @@ export default {
   }
 }
 </script>
+<style>
+
+</style>

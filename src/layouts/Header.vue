@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <ul>
-      <li><router-link to="/">Home</router-link></li>
+      <li><router-link to="/">vue.js 스터디 </router-link></li>
       <li><router-link to="/DataBinding">Data Binding</router-link></li>
       <li><router-link to="/vFor">Binding</router-link></li>
       <li><router-link to="/NestedComponent">components</router-link></li>
@@ -30,5 +30,6 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style >
+
 </style>

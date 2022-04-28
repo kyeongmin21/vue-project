@@ -1,5 +1,7 @@
+.baseWrap { width: 100%; height: 100vh; display: flex; overflow: hidden;}
 .header { width: 190px; overflow-y: auto; border:1px solid #333; text-align: left; padding-left: 10px; }
 .header ul li { width: 100%; height: 40px; line-height: 40px; border-bottom: #333; }
+.wrap { flex-grow: 1; padding-top: 50px; }
 
 #nav a { font-weight: bold; color: #2c3e50; text-decoration: none;}
 #nav .router-link-exact-active { color: #42b983; }
@@ -18,21 +20,6 @@
     text-align: center;
     color: #2c3e50;
 }
-
-#nav {
-    padding: 30px;
-}
-
-#nav a {
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-    color: #42b983;
-}
-
-
 
 
 
