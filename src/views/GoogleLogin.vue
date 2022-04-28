@@ -4,7 +4,6 @@
       <div id="google-signin-btn"></div>
     </div>
     <button type="button" @click="signOut">구글 로그아웃</button>
-
     <GoogleMap api-key="AIzaSyCcESs9ObeJsAfgHcttqttqdaOQGRQ311g"
                class="googleMap"
                :center="center"
@@ -31,18 +30,17 @@ export default {
   },
   methods: {
     onSignIn (googleUser) {
-      const profile = googleUser.getBasicProfile();
-      console.log("ID={}" + profile.getId());
-      console.log("Full Name={}" + profile.getName());
-      console.log("Given Name={}" + profile.getGivenName());
-      console.log("Family Name={}" + profile.getFamilyName());
-      console.log("Image URL={}" + profile.getImageUrl());
-      console.log("Email={}" + profile.getEmail());
-      const id_token = googleUser.getAuthResponse().id_token;
-      console.log("ID Token={}" + id_token);
+      const profile = googleUser.getBasicProfile()
+      console.log('ID: ' + profile.getId())
+      console.log('Full Name: ' + profile.getName())
+      console.log('Given Name: ' + profile.getGivenName())
+      console.log('Family Name: ' + profile.getFamilyName())
+      console.log('Image URL: ' + profile.getImageUrl())
+      console.log('Email: ' + profile.getEmail())
+      const idToken = googleUser.getAuthResponse().id_token
+      console.log('ID Token: ' + idToken)
     },
     signOut () {
-      console.log("구글 로그아웃");
       window.gapi.auth2.getAuthInstance().disconnect();
     }
   }

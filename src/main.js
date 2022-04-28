@@ -25,4 +25,3 @@ createApp(App)
   })
   .mount('#app')
 
-window.Kakao.init('3d11e9ddcd1b78eee6b8dec29e8583e4')

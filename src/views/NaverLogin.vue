@@ -23,7 +23,7 @@ export default {
     this.naverLogin = new window.naver.LoginWithNaverId({
       clientId: '1DjPLGm4AX2amePk7Cqq',
       callbackUrl: 'http://localhost:8080/naverlogin',
-      isPopup: true,
+      isPopup: false,
       loginButton: {
         color: 'green', type: 3, height: 50
       }
@@ -49,7 +49,7 @@ export default {
   methods: {
     naverLogout () {
       const accessToken = this.naverLogin.accessToken.accessToken
-      const url = `/oauth2.0/token?grant_type=delete&client_id=zFcLWPMTcDQTNB6iIOy&client_secret=bUW7FZMpS9&access_token=${accessToken}&service_provider=NAVER`
+      const url = `/oauth2.0/token?grant_type=delete&client_id=1DjPLGm4AX2amePk7Cqq&client_secret=SxzFKOnoHk&access_token=${accessToken}&service_provider=NAVER`
       axios.get(url).then((res) => {
         console.log(res.data)
       })

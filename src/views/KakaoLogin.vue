@@ -15,15 +15,15 @@
 <script>
 export default {
   name: 'KakaoLogin',
-  mounted () {
-    if (window.kakao && window.kakao.maps) {
-      this.initMap()
-    } else {
-      const script = document.createElement('script')
-      script.onload = () => kakao.maps.load(this.initMap)
-      script.src = 'http://dapi.kakao.com/v2/maps/sdk.js?autoload=false&appkey=3d11e9ddcd1b78eee6b8dec29e8583e4'
-      document.head.appendChild(script)
-    }
+  mounted() {
+    window.Kakao.init('3d11e9ddcd1b78eee6b8dec29e8583e4')
+    const mapContainer = document.getElementById('map'), // 지도를 표시할 div
+      mapOption = {
+        center: new kakao.maps.LatLng(37.564343, 126.947613), // 지도의 중심좌표
+        level: 3, // 지도의 확대 레벨
+      }
+
+    const mapObject = new kakao.maps.Map(mapContainer, mapOption)
   },
   methods: {
     kakaoLogin () {
@@ -59,16 +59,8 @@ export default {
       // eslint-disable-next-line no-undef
       Kakao.Auth.logout((response) => {
         alert(response + ' logout')
-        window.location.href = '/'
+        window.location.href = 'http://localhost:8080/KakaoLogin'
       })
-    },
-    initMap() {
-      const mapContainer = document.getElementById('map'),
-        mapOption = {
-          center: new kakao.maps.LatLng(37.564343, 126.947613),
-          level: 3
-        }
-      const map = new kakao.maps.Map(mapContainer, mapOption)
     }
   }
 }
