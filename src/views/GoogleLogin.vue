@@ -14,18 +14,18 @@
 </template>
 
 <script>
-import {GoogleMap, Marker} from 'vue3-google-map'
+import { GoogleMap, Marker } from 'vue3-google-map'
 
 export default {
   name: 'GoogleLogin',
-  components: {GoogleMap, Marker},
-  mounted() {
-    window.gapi.signin2.render("google-signin-btn", {onsuccess: this.onSignIn});
+  components: { GoogleMap, Marker },
+  mounted () {
+    window.gapi.signin2.render('google-signin-btn', { onsuccess: this.onSignIn })
   },
-  data() {
+  data () {
     return {
       // https://www.npmjs.com/package/vue3-google-map
-      center: {lat: 37.504449, lng: 127.048860}
+      center: { lat: 37.504449, lng: 127.048860 }
     }
   },
   methods: {
@@ -41,7 +41,7 @@ export default {
       console.log('ID Token: ' + idToken)
     },
     signOut () {
-      window.gapi.auth2.getAuthInstance().disconnect();
+      window.gapi.auth2.getAuthInstance().disconnect()
     }
   }
 }
