@@ -55,10 +55,7 @@
           "ignores": [
             "default",
             "kakao",
-            "Kakao",
-            "naver",
-            "Naver",
-            "gapi"
+            "Kakao"
           ]
         }
       ]
