@@ -48,18 +48,7 @@
     "parserOptions": {
       "parser": "babel-eslint"
     },
-    "rules": {
-      "vue/multi-word-compnent-names": [
-        "error",
-        {
-          "ignores": [
-            "default",
-            "kakao",
-            "Kakao"
-          ]
-        }
-      ]
-    }
+    "rules": {}
   },
   "browserslist": [
     "> 1%",
