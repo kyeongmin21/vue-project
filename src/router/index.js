@@ -96,6 +96,11 @@ const routes = [
     path: '/googlelogin',
     name: 'GoogleLogin',
     component: () => import(/* webpackChunkName: "googlelogin" webpackPrefetch: true */ '@/views/GoogleLogin.vue')
+  },
+  {
+    path: '/params',
+    name: 'Params',
+    component: () => import(/* webpackChunkName: "params" webpackPrefetch: true */ '@/views/Params.vue')
   }
 ]
 

@@ -24,6 +24,7 @@
       <li><router-link to="/KakaoLogin">카카오로그인</router-link></li>
       <li><router-link to="/NaverLogin">네이버로그인</router-link></li>
       <li><router-link to="/GoogleLogin">구글로그인</router-link></li>
+      <li><router-link to="/Params">params</router-link></li>
     </ul>
   </div>
 </template>
