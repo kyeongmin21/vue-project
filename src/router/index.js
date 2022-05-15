@@ -101,6 +101,16 @@ const routes = [
     path: '/router',
     name: 'Router',
     component: () => import(/* webpackChunkName: "router" webpackPrefetch: true */ '@/views/Router.vue')
+  },
+  {
+    path: '/params',
+    name: 'Params',
+    component: () => import(/* webpackChunkName: "params" webpackPrefetch: true */ '@/components/Params.vue')
+  },
+  {
+    path: '/query',
+    name: 'Query',
+    component: () => import(/* webpackChunkName: "query" webpackPrefetch: true */ '@/components/Query.vue')
   }
 ]
 
