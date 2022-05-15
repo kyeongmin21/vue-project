@@ -103,14 +103,16 @@ const routes = [
     component: () => import(/* webpackChunkName: "router" webpackPrefetch: true */ '@/views/Router.vue')
   },
   {
-    path: '/params',
-    name: 'Params',
-    component: () => import(/* webpackChunkName: "params" webpackPrefetch: true */ '@/components/Params.vue')
-  },
-  {
     path: '/query',
     name: 'Query',
-    component: () => import(/* webpackChunkName: "query" webpackPrefetch: true */ '@/components/Query.vue')
+    // true로 설정하면 데이터를 props로 받습니다.
+    props: true,
+    component: () => import(/* webpackChunkName: "query" webpackPrefetch: true */ '@/views/Query.vue')
+  },
+  {
+    path: '/params',
+    name: 'Params',
+    component: () => import(/* webpackChunkName: "params" webpackPrefetch: true */ '@/views/Params.vue')
   }
 ]
 
