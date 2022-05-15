@@ -1,15 +1,15 @@
 <template>
- <div>
-   <h1>Params</h1>
+  <div>
+    <h1>Params</h1>
 
-   <h2>params로 받은 데이터</h2>
-   <div>name: {{ $route.params.name }}</div>
-   <div>age: {{ $route.params.age }}</div>
+    <h2>params로 받은 데이터</h2>
+    <div>name: {{ $route.params.name }}</div>
+    <div>age: {{ $route.params.age }}</div>
 
-   <h2>props로 받은 데이터</h2>
-   <div>name: {{ name }}</div>
-   <div>age: {{ age }}</div>
- </div>
+    <h2>props로 받은 데이터</h2>
+    <div>name: {{ name }}</div>
+    <div>age: {{ age }}</div>
+  </div>
 </template>
 
 <script>
